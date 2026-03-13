@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Maneda.iml" filepath="$PROJECT_DIR$/Maneda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ManegementApplication.iml" filepath="$PROJECT_DIR$/ManegementApplication.iml" />
     </modules>
   </component>
 </project>
