@@ -1,21 +1,35 @@
 package main.java.com.dandara.ManagementApplication.model;
 
+import main.java.com.dandara.ManagementApplication.repository.TaskRepository;
+
 import java.time.Duration;
+import java.util.UUID;
 
 public class Task {
-    private int id;
+
+    private String id;
     private String name;
     private Duration duration;
     private Boolean complete;
 
-    public Task(int id, String name, Duration duration, Boolean complete) {
-        this.id = id;
+    public Task(String name, Duration duration, Boolean complete) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.duration = duration;
         this.complete = complete;
     }
 
-    public int getId() {
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", duration=" + duration +
+                ", complete=" + complete +
+                '}';
+    }
+
+    public String getId() {
         return id;
     }
 
