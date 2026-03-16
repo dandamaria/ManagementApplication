@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class Task {
 
-    private String id;
+    private final String id;
     private String name;
     private Duration duration;
     private Boolean complete;
@@ -27,6 +27,10 @@ public class Task {
                 ", duration=" + duration +
                 ", complete=" + complete +
                 '}';
+    }
+
+    public void markAsCompleted(){
+        setComplete(true);
     }
 
     public String getId() {

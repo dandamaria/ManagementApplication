@@ -9,13 +9,9 @@ import java.util.List;
 
 public class ProjectRepository {
     List<Project> projects = new ArrayList<>();
-    TaskService taskService = new TaskService();
 
     public void save(Project project){
         projects.add(project);
-    }
-    public void delete(Project project){
-        projects.remove(project);
     }
     public Project findById(String id){
         for(Project p : projects){
@@ -28,17 +24,8 @@ public class ProjectRepository {
     public List<Project> findAll(){
         return projects;
     }
-
-    public void getId(){
-        for (Project p : projects){
-            p.getId();
-        }
+    public void delete(String id){
+        projects.remove(findById(id));
     }
-
-    /*public void addTaskList(String idProject, Task task){
-        Project p = findById(idProject);
-        taskService.createTask(task.getName(),task.getDuration(),task.getComplete());
-        p.setTasks(taskService.getTasks());
-    }*/
 
 }

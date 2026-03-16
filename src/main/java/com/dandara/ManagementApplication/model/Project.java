@@ -42,8 +42,6 @@ public class Project {
             throw new IllegalArgumentException("Preço negativo - entrada inválida");
         }
 
-
-
         this.name = name;
         this.description = description;
         this.price = price;
@@ -54,12 +52,14 @@ public class Project {
         this.id = UUID.randomUUID().toString();
     }
 
-    public List<Task> getTasks() {
-        return tasks;
+    public void addTask(Task task){
+        tasks.add(task);
     }
 
-    public void setTasks(List<Task> tasks) {
-        this.tasks = tasks;
+    public void listTasks(){
+        for (Task t : tasks){
+            System.out.println(t.getName());
+        }
     }
 
     public String getId() {
